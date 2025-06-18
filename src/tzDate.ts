@@ -14,7 +14,10 @@ export const tzDate = (options?: DateOptions) =>
                 ...options,
             })
         )
-        .Decode((s) => new Date(s))
+        .Decode((s) => {
+            console.log("s:", s)
+            return new Date(s)
+        })
         .Encode((d) => {
             const timeZone = "Europe/Berlin"
             const timeZonedDate = DateTime.fromISO(d.toISOString()).setZone(
