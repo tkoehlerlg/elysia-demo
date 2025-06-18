@@ -5,6 +5,7 @@ import { DateOptions } from "@sinclair/typebox"
 export const exampleTimeZone = "Europe/Berlin"
 const exampleDate = DateTime.now().setZone(exampleTimeZone).toISO()
 
+// https://github.com/sinclairzx81/typebox?tab=readme-ov-file#transform-types
 export const tzDate = (options?: DateOptions) =>
     t
         .Transform(
